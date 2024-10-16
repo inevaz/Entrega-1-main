@@ -1,0 +1,250 @@
+/* Estilos generales para la página */
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(0deg, #f4f4f4 20%, #e0e0e0 70%);
+  color: #333;
+}
+
+/* Asegúrate de añadir una clase o ID al contenedor principal si aún no lo tienes */
+.main-content {
+  margin-top: 60px; /* Ajusta este valor según el tamaño de tu navbar */
+}
+
+/* Estilos para la lista de productos */
+.product-list {
+  grid-template-columns: repeat(2, 1fr);  /* Establece dos columnas de igual ancho */
+  grid-gap: 2% 3%;
+  padding: 1em;
+  display: grid;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+/* Estilo para cada producto */
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1em;
+  padding: 20px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen del producto */
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los textos y botones */
+.product-item h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color:  #FF8C00 !important;
+}
+
+.product-item p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.product-item .btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.product-item .card-body {
+  text-align: left;
+}
+
+/* Estilos para el fondo de la tabla de contacto */
+/* .text-muted {
+  background: linear-gradient(90deg, #f4f4f4, #e0e0e0);
+  width: 100%;
+  height: 17em;
+  display: inline-table;
+} */
+
+
+/* Estilos para la tabla de contacto */
+.tabla-contacto {
+  display: table;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font: 25px light italic;
+}
+
+/* Estilos para las filas y columnas de la tabla de contacto */
+.fila {
+  display: table-row;
+}
+
+.columna {
+  display: table-cell;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+/* Estilos para los encabezados */
+h1, h4 {
+  color: #333;
+}
+
+
+
+/* Estilos para la tabla de contacto */
+.tabla-contacto {
+  display: table;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font: 25px light italic;
+}
+
+/* Estilos para las filas y columnas de la tabla de contacto */
+.fila {
+  display: table-row;
+}
+
+.columna {
+  display: table-cell;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+/* Estilos para los encabezados */
+h1, h4 {
+  color: #333;
+}
+
+/* Media Queries */
+
+/* Resolución Estándar: 1366 x 768 px */
+@media only screen and (min-width: 1366px) and (max-width: 768px) {
+  .product-item {
+    width: 300px;
+  }
+ /*  .text-muted {
+    border: 3px solid #ddd;  */ /* Borde color gris claro */
+  /*   height: 17em;
+  }  */
+
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .fila {
+    display: table-row;
+  }
+
+  .columna {
+    margin: 5em;
+    display: table-cell;
+    text-align: left;
+  }
+
+  .product-item {
+    border-radius: 10%;
+  }
+
+  .product-item img {
+    max-width: 90%;
+    border-radius: 10%;
+  }
+}
+
+/* Tableta en Modo Vertical: 768 x 1024 px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .product-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+/*   .text-muted {
+    height: 3em;
+  } */
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1% 10%;
+  }
+
+  .fila {
+    display: table-row;
+  }
+
+  .columna {
+    margin: 5em;
+    text-align: left;
+  }
+
+  .product-item {
+    padding: 15px 0;
+    border-radius: 10%;
+  }
+
+  .product-item img {
+    max-width: 90%;
+    border-radius: 10%;
+  }
+}
+
+/* Smartphone Pequeño (Ej. iPhone SE): 320 x 568 px */
+@media only screen and (min-width: 320px) and (max-width: 568px) {
+  .product-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .product-item .card-body {
+    font-size: 1em;
+  }
+
+  .fila {
+    font-size: 0.8em;
+    margin-right: 1em; 
+  }
+
+  .columna {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  /* .text-muted {
+    font-size: 1em;
+    height: 3em;
+  } */
+
+  h1 {
+    margin-right: 1em;
+    font-size: 0.8em;
+  }
+
+  h4 {
+    margin-right: 1em;
+    font-size: 0.8em;
+  }
+
+  p {
+    font-size: 0.69em;
+  }
+
+  .arriba {
+    font-size: 0.69em;
+  }
+
+}

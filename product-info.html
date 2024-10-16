@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/product-info.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <li class="nav-item ml-auto"> <!--boton-menú desplegable-->
+              <li class="nav-item dropdown ml-auto">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span id="nombreUsuario">Bienvenido</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" id="miPerfil">Mi Perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Mi carrito</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="login.html">Cerrar Sesión</a></li>
+                </ul>
+              </li>
+              
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <script>
+    // Verifica si hay un nombre de usuario almacenado y lo muestra, parte del desafiate
+    const nombreUsuario = sessionStorage.getItem('nombreUsuario');
+    if (nombreUsuario) {
+      document.getElementById('nombreUsuario').textContent = `Bienvenido, ${nombreUsuario}`;
+    }
+  </script>
+
+  <main class="container">
+    <!-- Sección para los detalles del producto -->
+    <div class="product-info">
+
+      <div class="contenedorimg">
+        <div class="row">
+          <div class="col-md-1"> </div>
+            <div class="col-md-1">
+              <p class="category-name">Categoría</p>
+            </div>
+              <!-- Imagen principal del producto -->
+               <!-- Columna para la imagen principal -->
+            <div class="col-md-8">
+              <img src="" class="img-fluid main-image" alt="Imagen del Producto">
+            </div>
+            <!-- Columna para las miniaturas -->
+            <div class="col-md-2">
+                <div class="row product-thumbnails mt-2">
+                    <!-- Las miniaturas de las imágenes se insertarán aquí dinámicamente -->
+                </div>
+            </div>
+        </div>
+
+      </div>
+        <p class="sold-count">Vendidos: 50 unidades</p>
+
+        <!-- Información del producto (debajo de la imagen grande y miniaturas) -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="pretitulo">
+                   <span class="product-price">Precio</span>
+                   <p class="product-title">Nombre del Producto</p>
+                </div>
+            </div>
+            <p class="product-description">Descripción del Producto</p>
+        </div>
+    </div>
+    <button> COMPRAR </button>
+
+    <!--Paso 1 Parte 2 Añadí un contenedor para los comentarios, Sección de calificaciones y comentarios -->
+
+<div class="container mt-5">
+  <h4>Calificaciones y Comentarios</h4>
+  
+ <!-- Paso 1 parte 3 Sección para las calificaciones, Sofi -->
+ <form class="rating">
+  <input type="radio" name="rating" id="rating5" value="5">
+  <label for="rating5" class="fa fa-star"></label>
+  
+  <input type="radio" name="rating" id="rating4" value="4">
+  <label for="rating4" class="fa fa-star"></label>
+  
+  <input type="radio" name="rating" id="rating3" value="3">
+  <label for="rating3" class="fa fa-star"></label>
+  
+  <input type="radio" name="rating" id="rating2" value="2">
+  <label for="rating2" class="fa fa-star"></label>
+  
+  <input type="radio" name="rating" id="rating1" value="1">
+  <label for="rating1" class="fa fa-star"></label>
+</form>
+
+  <!-- Sección de comentarios -->
+  <div class="mt-3">
+    <textarea id="comment" placeholder="Escribe tu comentario aquí..." rows="3" class="form-control mt-2"></textarea>
+    <button id="submit-review" class="btn btn-primary mt-2">Enviar Comentario</button>
+  </div>
+</div>
+  
+ 
+  
+    <!--Paso 1 parte 3-->
+    <div id="reviews" class="mt-4">
+      <!-- Los comentarios se insertarán aquí dinámicamente -->
+  </div>
+
+
+  
+  
+  <!-- Seccion de productos relacionados, Chiara -->
+  <div class="related-products">
+    <h2>Productos Relacionados</h2>
+    <div id="barra-productos" class="barra-productos"></div>
+</div>
+
+  </main>
+
+  
+  <footer class="text-muted mt-4">
+    <div class="container">
+      <div id="product-details" class="my-5">
+        <!-- Aquí se mostrará la información del producto -->
+        <h2 id="name"></h2>
+        <p id="description"></p>
+        <p id="cost"></p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+    </div>
+  </footer>
+
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+</body>
+
+</html>
+

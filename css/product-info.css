@@ -1,0 +1,335 @@
+body {
+  background-color: white;
+}
+
+.contenedorimg{
+  margin-top: 2rem;
+ /*  margin-left: 1rem; */
+  margin-right: 5rem;
+}
+
+/* Sección de miniaturas de productos */
+.product-thumbnails {
+ /*  margin-bottom: 20px; */
+ /*  margin-left: 0%; */
+ /*  display: flex; */
+  /* flex-direction: column;  */ /* Alinear las miniaturas en una columna */
+ /*  gap: 15px;  */ /* Espacio entre las miniaturas */
+/*   max-width: 100%; */
+  border-color: black;
+  
+}
+
+.product-thumbnails img {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  min-width: 168px;
+  min-height: auto;
+  cursor: pointer;  /* Mostrar un puntero para hacer las miniaturas clicables */
+  object-fit: contain;  /* Mantiene la proporción de la imagen y recorta si es necesario */
+  border: 1px solid #ddd;  /* Un pequeño borde para que luzcan bien */
+  border-radius: 5px;  /* Bordes ligeramente redondeados */
+}
+
+.col-md-8 {
+  /* float: left; */
+ /*  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); */
+  /* margin-right: 0%; */
+  max-width: 100%;  /* Ajuste del ancho máximo a 100% */
+  /* height: auto;  */ /* Mantener la proporción */
+  object-fit: contain;  /* Mantener proporciones sin distorsionar */
+  display: flex;
+  align-items: center;
+}
+
+
+.img-fluid.main-image {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+ /*  min-width: 168px; */
+ /*  min-height: auto; */
+ display: flex;
+ align-items: center;
+  object-fit: contain;  /* Mantiene la proporción de la imagen y recorta si es necesario */
+/*   margin: 0 auto; */
+  border: 5px solid white;  /* Aplica un borde blanco */
+  border-radius: 5px;  /* Bordes ligeramente redondeados */
+}
+
+/* Ajusta el margen derecho de la imagen principal */
+/* .main-image { */
+  /* float: left; */
+ /*  margin-right: 0%;  */ /* Reducido para acercar la imagen principal a las miniaturas */
+/*   max-width: 44em;
+  height: auto;
+  object-fit: cover;
+} */
+
+/* Ajusta la disposición de las miniaturas */
+.product-thumbnails {
+ /*  margin-left: 0; */  /* Eliminado el margen izquierdo para acercar las miniaturas */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  /* Ajustar el espacio entre las miniaturas */
+}
+
+.product-thumbnails img {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  min-width: 9.5em;  /* Ajustar tamaño de miniaturas si es necesario */
+  cursor: pointer;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilo para el nombre de la categoría */
+.category-name {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 1em; /* Tamaño de la fuente */
+  color: #333; /* Color del texto */
+  /* text-align: right; */
+  /* margin-bottom: 330px; */ /* Espacio entre el texto y la imagen */
+}
+
+.product-price {
+  margin-top: 9px;
+  font-size: 2em;
+  margin-right: 500px;
+  float: right;
+}
+
+.product-title {
+  font-size: 2em;
+  margin-left: 40px;
+}
+
+.sold-count {
+  margin-top: 5px;
+  margin-left: 50px;
+  font-size: 70%;
+}
+
+
+
+.product-description {
+  margin-left: 40px;
+}
+
+/* Estilo para los botones */
+button {
+  margin-left: 2em;
+  font-size: 1.5em;
+  width: 6em;
+  height: 2em;
+  border-radius: 1em;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgb(217, 217, 217);
+}
+
+button {
+  color: grey;
+}
+
+/* Estilos para la barra de productos relacionados */
+.related-products {
+  padding: 20px;
+  background-color: #f9f9f9; /* Color de fondo suave */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-top: 40px;
+}
+
+.related-products h2 {
+  font-size: 24px;
+  color: #333; /* Texto oscuro pero no completamente negro */
+  margin-bottom: 20px; /* Espacio inferior */
+  text-align: center;
+}
+
+/* Estilo para la barra de productos */
+.barra-productos {
+  display: grid; /* Layout de cuadrícula */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajustable al tamaño de pantalla */
+  gap: 20px; /* Espacio entre productos */
+  margin-top: 20px;
+}
+
+.barra-productos .producto {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en productos */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.barra-productos .producto:hover {
+  transform: translateY(-5px); /* Efecto hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra más intensa en hover */
+}
+
+/* .barra-productos img {
+  max-width: 100%;  */ /* Asegura que la imagen no exceda el contenedor */
+/*   border-radius: 8px;
+  margin-bottom: 10px;
+} */
+.barra-productos img {
+  max-width: 100%; 
+  height: auto;    
+  object-fit: cover; 
+}
+.barra-productos .producto h3 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.barra-productos .producto p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.barra-productos .producto .precio {
+  font-size: 16px;
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.barra-productos .producto button {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.barra-productos .producto button:hover {
+  background-color: #d35400; /* Cambia color en hover */
+}
+
+/* Estilo para las estrellas, Sofi */
+.rating {
+  direction: rtl;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3px; /* Espacio más reducido entre estrellas */
+  padding-right: 1em;
+}
+
+.rating input {
+  display: none; /* Ocultar los radio buttons */
+}
+
+.rating label {
+  font-size: 1rem; /* Tamaño de las estrellas */
+  color: #999; /* Un gris oscuro para las estrellas no seleccionadas */
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+  color: #d4af37; /* Color de las estrellas */
+}
+
+.rating input:checked + label {
+  color: #d4af37;
+}
+
+.rating label:active {
+  transform: scale(1.05); /* Transformación más sutil al hacer clic */
+}
+/* Termina estilo para estrellas*/
+
+
+
+/* Estilos generales para los comentarios */
+.review-rating {
+  font-size: 1.5em; /* Tamaño de las estrellas */
+}
+
+textarea {
+  width: 100%; /* Ancho completo para el área de comentarios */
+  margin-top: 10px; /* Espacio superior */
+}
+
+
+.container {
+  padding: 10px;
+}
+
+.barra-productos {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; 
+}
+
+.barra-productos img {
+  max-width: 100%; 
+  height: auto;    
+  object-fit: cover; 
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .barra-productos {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  }
+}
+
+@media (max-width: 480px) {
+  .barra-productos {
+      grid-template-columns: 1fr; 
+  }
+}
+
+
+
+
+ /* parte Ale*/
+#submit-review {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 10em;
+  height: 3em;
+  /* margin: 0 right; */ /* Centra horizontalmente el botón */
+  display: block; /* Asegura que el botón ocupe toda la fila disponible */
+  float: right;
+}
+
+
+
+#comment { 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  border: 1px solid #ccc; 
+  padding: 10px; /* Ajusta el espacio interno del recuadro */
+  border-radius: 5px; 
+  width: 68em; /* Ancho deseado */
+  height: 10em; /* Altura deseada */
+  float: center;
+  padding-right: 5em;
+}
+
+.form-contro.mt-2{
+  float: center;
+}
+
+
+/* Estilo para comentarios */
+#reviews{
+  padding-right: 5em;
+  padding-left: 5em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+}

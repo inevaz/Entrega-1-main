@@ -1,0 +1,334 @@
+ /* Estilos generales para el cuerpo */
+   body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* Modo día */
+  body.light-mode {
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #FA861A; /* Texto oscuro */
+  }
+
+  /* Navbar en modo día */
+  .navbar-light {
+    background-color: #ffffff !important;
+    color: #000;
+  }
+
+  /* Modo noche */
+  body.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #f1f1f1; /* Texto claro */
+  }
+
+  /* Navbar en modo noche */
+  .navbar-dark {
+    background-color: #343a40 !important;
+    color: white;
+  }
+
+  #labelModo {
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+
+
+ /* Botones, campos y alertas */
+ input, button {
+    transition: background-color 0.5s, color 0.5s;
+  }
+
+
+/* Estilo inputs en modo oscuro */
+body.dark-mode input {
+    background-color: #2c2c2c; /* Color de fondo oscuro */
+    border-color: #555; /* Color de borde */
+    color: white; /* Color del texto */
+  }
+
+  /* Alertas */
+  .alert {
+    transition: opacity 0.5s;
+  }
+
+  /* Animación de cambio de icono */
+  .toggle-icon {
+    transition: transform 0.5s ease;
+  }
+
+  #inputGroupFile02 {
+    font-size: 0.7em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+
+ 
+
+  /* Botón de guardar cambios */
+  button[type="submit"] {
+    background-color: #ffa64d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff8c1a;
+  }
+  
+  /* Formato para filas del formulario */
+  .row.g-3 {
+    margin-top: 10px;
+  }
+
+ /*  Foto a la derecha */
+  .col-sm-2{
+align-content: right;
+  }
+  
+  .topProfile svg {
+    width: 80px;
+    height: 80px;
+    color: #ffa64d;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  
+  /* Switch Día/Noche */
+  .form-check-input {
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+  }
+  /* Estilos del interruptor */
+/* Estilos del interruptor */
+.form-check-input {
+    cursor: pointer;
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  
+  /* Estilo del círculo móvil */
+  .form-check-input:before {
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  /* Estilos del interruptor */
+  .form-check-input {
+    cursor: pointer;
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+
+
+  .form-check-input:checked {
+    background-color: #ff8c1a;
+  }
+  
+  .form-check-input:checked:before {
+    transform: translateX(20px);
+  }
+  
+  body.dark-mode .form-check-input {
+    background-color: #444;
+  }
+  
+  body.dark-mode .form-check-input:checked {
+    background-color: #ff8c1a;
+  }
+  
+  body.dark-mode .form-check-input:before {
+    background-color: #bbb;
+  }
+  
+  body.dark-mode .form-check-input:checked:before {
+    background-color: #ff8c1a;
+  }
+  .form-check-input:checked {
+    background-color: #ff8c1a;
+    border-color: #ff8c1a;
+  }
+  
+  .alert {
+    display: none; /* Oculto por defecto */
+  }
+  
+  /* Estilo para los inputs */
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Estilo inputs en modo oscuro */
+body.dark-mode input {
+    background-color: #2c2c2c;
+    border-color: #555;
+    color: white;
+}
+
+/* Ajustar el tamaño de las columnas */
+.row .col-sm-6 {
+    padding: 0 10px;
+}
+
+/* Footer en modo claro */
+footer {
+    color: #6c757d; /* Gris oscuro para modo claro */
+    transition: color 0.5s ease;
+}
+
+/* Footer en modo oscuro */
+body.dark-mode footer#text {
+    color: white; /* Texto blanco para modo oscuro */
+    
+}
+
+/* Icono en modo claro */
+.bi-person {
+    fill: #ffa64d; /* Color original o cualquier otro color */
+    transition: fill 0.5s ease; /* Transición suave entre colores */
+}
+
+/* Icono en modo oscuro */
+body.dark-mode .bi-person {
+    fill: white; /* Icono blanco en modo oscuro */
+}
+
+
+
+
+
+/* Estilo del rectángulo que contiene todo */
+.contenedor-rectangulo {
+    background-color: #2c2c2c; /* Fondo oscuro para modo noche */
+    color: white; /* Texto claro */
+    padding: 30px;
+    margin: 50px auto; /* Centra el contenedor horizontalmente */
+    border-radius: 15px; /* Bordes redondeados */
+    max-width: 800px; /* Limitar el ancho del rectángulo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: background-color 0.5s, color 0.5s; /* Transición suave entre modos */
+}
+
+/* Fondo claro para modo día */
+body.light-mode .contenedor-rectangulo {
+    background-color: #ffffff;
+    color: #FA861A;
+    background: rgb(248, 226, 185);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Fondo oscuro para modo noche */
+body.dark-mode .contenedor-rectangulo {
+    background-color: #ffffff;
+   color: white;
+    background: black;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs en el contenedor */
+.contenedor-rectangulo input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+/* Cambiar estilo de inputs en modo día */
+body.light-mode .contenedor-rectangulo input {
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 1px solid #ced4da;
+}
+
+/* Centrar el icono SVG */
+.contenedor-rectangulo .col-sm-2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Botón de guardar cambios */
+.contenedor-rectangulo button[type="submit"] {
+    width: 100%;
+    background-color: #ffa64d;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contenedor-rectangulo button[type="submit"]:hover {
+    background-color: #ff8c1a;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff8c1a;
+  }
+
+
+  /* Estilo de alertas */
+/* General alert styles */
+.alert {
+    transition: color 0.5s;
+  }
+  
+  /* Ensure text is white for all alerts in dark mode */
+  body.dark-mode .alert,
+  body.dark-mode .alert-danger {
+    color: white !important;
+  }
+
+  /* que no aparezcan las flechas en contacto */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Estilos que estaban en style.css para la clase container */
+.barrasuperior,
+.float-end {
+  font-family: 'Verdana', serif !important;
+  text-align: center;
+}
+
+/* para que la imagen quede bn */
+.profile-image-container {
+  margin-top: -125px;
+  margin-left: 67px;
+}
+

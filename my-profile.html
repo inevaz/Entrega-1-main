@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eMercado - Todo lo que busques está aquí</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" 
+  referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/my-profile.css">
+ <!--Links parte 4-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <style>
+    
+/* que no aparezcan las flechas en contacto */
+/* input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance: textfield; }
+ */
+
+  /* Parte 4 Estilos  para Modo Noche */
+ /*  body.dark-mode {
+          background-color: #121212;
+          color: white;
+      } */
+     /*  .dark-mode .navbar {
+          background-color: #343a40; */ /* Navbar en Modo Noche */
+   /*    } */
+      .dark-mode a {
+          color: white; /* Enlaces en Modo Noche */
+      }
+      .dark-mode .form-check-label {
+          color: white; /* Etiqueta del switch */
+      }
+
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+   
+  </style>
+
+</head>
+
+<body>
+ 
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-between">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="categories.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sell.html">Vender</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <li class="nav-item ml-auto"> <!--boton-menú desplegable-->
+              <li class="nav-item dropdown ml-auto">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span id="nombreUsuario">Bienvenido</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" id="miPerfil">Mi Perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Mi carrito</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="login.html">Cerrar Sesión</a></li>
+                </ul>
+              </li>
+              
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    // Verifica si hay un nombre de usuario almacenado y lo muestra, parte del desafiate
+    const nombreUsuario = sessionStorage.getItem('nombreUsuario');
+    if (nombreUsuario) {
+      document.getElementById('nombreUsuario').textContent = `Bienvenido, ${nombreUsuario}`;
+    }
+
+
+  </script>
+
+
+
+<div class="contenedor-rectangulo">
+  <div class="col-sm-2">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+      </svg> -->
+  </div>
+  
+  <!--Parte 4-->
+
+<!-- Switch Modo Día/Noche con iconos -->
+<div class="container mt-4">
+
+  <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="toggleModo">
+      <label class="form-check-label" for="toggleModo" id="labelModo"></label>
+
+</div>
+
+
+<main>
+    <div class="topProfile">
+      <form action="#" method="post" class="row mt-4" id="registerForm" novalidate>
+       
+        <div class="row">
+     <!--      <div class="col-sm-6"> -->
+      <div class="col-sm-10">
+        <h1 class="mb-3">Perfil</h1>
+      </div>
+<!--               <div class="col-sm-2"> <!-- Cambiar a col-sm-2 o menos para hacerlo más pequeño -->
+                 <!--  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16"> -->
+                      <!-- <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/> -->
+                 <!--  </svg> -->
+             <!--  </div>  -->
+              <div class="col-sm-7"></div>
+              <div class="col-sm-5">
+                <div class="profile-image-container"> <!-- foto de perfil -->
+                <img id="profileImage" src="" alt="Imagen de perfil" style="max-width: 150px; height: 150px; border-radius: 50%; display: none;">
+              </div>
+              <div class="container mt-3">
+                  <div class="input-group mb-3 col-sm-3"> <!-- Cambia el tamaño del input aquí también -->
+                      <input type="file" class="form-control" id="inputGroupFile02">
+                      <img id="imgPreview" src="" alt="Vista previa de la imagen" style="max-width: 100%; height: auto; display: none;">
+                      <label class="input-group-text" id="inputGroupFile02" for="inputGroupFile02">Subir</label>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <div class="col-sm-12 text-center">
+    </div>
+    <div id="perfill">
+    <hr class="my-4">
+    <div class="row g-3">
+      <!-- Fila 1: Primer y Segundo Nombre -->
+      <div class="col-sm-6">
+        <label for="nombre" class="form-label">Primer Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+        <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+      </div>
+    
+      <div class="col-sm-6">
+        <label for="segnombre" class="form-label">Segundo Nombre</label>
+        <input type="text" class="form-control" id="segnombre">
+        <div class="invalid-feedback">Por favor, ingresa tu segundo nombre.</div>
+      </div>
+    </div>
+    
+    <!-- Nueva fila -->
+    <div class="row g-3">
+      <!-- Fila 2: Primer y Segundo Apellido -->
+      <div class="col-sm-6">
+        <label for="apellido" class="form-label">Primer Apellido</label>
+        <input type="text" class="form-control" id="apellido" required>
+        <div class="invalid-feedback">Por favor, ingresa tu apellido.</div>
+      </div>
+    
+      <div class="col-sm-6">
+        <label for="segapellido" class="form-label">Segundo Apellido</label>
+        <input type="text" class="form-control" id="segapellido">
+        <div class="invalid-feedback">Por favor, ingresa tu apellido.</div>
+      </div>
+    </div>
+    
+      <div class="row g-3">
+        <!-- Fila 3: Telefono de contacto -->
+        
+          <div class="col-sm-6">
+            <label for="contacto" class="form-label">Teléfono de Contacto</label>
+            <input type="number" class="form-control" id="contacto">
+            <div class="invalid-feedback">Por favor, ingresa tu número de contacto.</div>
+          </div>
+        <!-- Fila 4: Email -->
+        <div class="col-sm-6">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="invalid-feedback">Por favor, ingresa un email válido.</div>
+        
+      </div>
+      
+    
+    <hr class="my-4">
+   
+          <button class="btn btn-primary" type="submit">Guardar cambios</button>
+        </div>
+      </div>
+    </form>
+  </div>
+    <div id="alert-success" class="alert alert-success fade" role="alert">
+      <p></p>
+  </div>
+  <div id="alert-danger" class="alert alert-danger alert-dismissible fade" role="alert">
+<p></p>
+    </div>
+  </main>
+
+
+  <footer> <!-- Acá eliminé la clase: text-muted mt-5, porque no se veía bien el color en el modo oscuro -->
+    <div class="container">
+      <p class="float-end">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p class="footersitio">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+    </div>
+  </footer>
+ 
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+</body>
+
+</html>

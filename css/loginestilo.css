@@ -1,0 +1,132 @@
+.pp{
+    color:rgb(248,226,185) ;
+}
+.enlace{
+    color: white;
+}
+body {
+    background: linear-gradient(0deg,rgb(244, 181, 107) 30%, rgb(248, 226, 185) 90%);
+    font-family: 'Raleway', sans-serif;
+}
+
+.Ingresar {
+    color: white;
+    border: rgb(248, 226, 185);
+    font-weight: 100;
+    font-size: 20px;
+    font-style: light italic;
+    text-align: center;
+    background-color: rgb(244, 181, 107);
+    width: 268px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.form-control {
+    color: #FA861A;
+    border: rgb(248, 226, 185);
+    font-weight: 100;
+    font-size: 20px;
+    font-style: light italic;
+    text-align: center;
+    background-color: rgb(248, 226, 185);
+    width: 575px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+ #nombre_usuario{
+    margin-top: 50px;
+    color: #FA861A;
+}
+ 
+#nombre_usuario::placeholder{
+    color: #FA861A;
+}
+
+#contraseña_usuario::placeholder{
+    color: #FA861A;
+}
+input::placeholder{
+    color: #FA861A;
+}
+
+.imagen {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 100%; /* Ajustado para pantallas pequeñas */
+    height: auto; /* Mantener la proporción */
+}
+
+.cuadrado {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin: 150px auto; /* Centrado automático */
+    width: 974px;
+    height: 660px;
+    background: linear-gradient(0deg, white 10%, rgb(248, 226, 185) 70%);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Añadido para consistencia */
+}
+
+/* Resolución Estándar: 1366 x 768 px */
+@media (min-width: 1366px) and (max-width: 1920px) {
+    .cuadrado {
+        width: 700px;
+        height: auto;
+    }
+}
+
+/* Tableta en Modo Vertical: 768 x 1024 px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cuadrado {
+        width: 90%;
+        height: auto;
+        margin: 50px auto;
+    }
+
+    .form-control {
+        width: 80%; /* Ajusta la anchura al 80% del contenedor */
+    }
+
+    .Ingresar {
+        width: 80%; /* Ajusta la anchura al 80% del contenedor */
+    }
+}
+
+/* Smartphone Pequeño (Ej. iPhone SE): 320 x 568 px */
+@media (max-width: 568px) {
+    .cuadrado {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .imagen {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-control {
+        width: 100%;
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+        height: 60px;
+    }
+
+    .Ingresar {
+        width: 100%;
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+        height: 60px;
+    }
+}
